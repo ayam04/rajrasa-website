@@ -33,7 +33,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Welcome to RajRasa
+          <span className="text-gold">Welcome to </span><span className="text-primary-gold">RajRasa</span>
         </motion.h1>
         <motion.p 
           className="font-abhaya text-xl mb-6"
@@ -41,7 +41,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Delve into the Rajasthani culinary experience
+          Where Heritage Meets Sustainability in the Heart of Rajasthan
         </motion.p>
         <motion.button 
           className="bg-primary-blue text-white px-8 py-3 rounded-full font-abhaya text-lg hover:bg-light-pink transition-colors duration-300"

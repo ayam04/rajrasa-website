@@ -1,8 +1,34 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
 export default function ChefSection() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
+  const images = [
+    {
+      src: "Gallery/chef1.jpg",
+      alt: "Kitchen preparation"
+    },
+    {
+      src: "Gallery/chef2.jpg",
+      alt: "Plating"
+    },
+    {
+      src: "Gallery/chef3.jpg",
+      alt: "Final presentation"
+    }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="py-16 bg-primary-blue text-white relative overflow-hidden">
       <div className="container mx-auto px-4">
@@ -36,20 +62,31 @@ export default function ChefSection() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <div className="absolute top-0 right-0 w-3/4 h-3/4 rounded-lg overflow-hidden shadow-lg">
-              <img 
-                src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c"
-                alt="Kitchen preparation"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="absolute bottom-0 left-0 w-3/4 h-3/4 rounded-lg overflow-hidden shadow-lg">
-              <img 
-                src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf"
-                alt="Plating"
-                className="w-full h-full object-cover"
-              />
-            </div>
+            {images.map((image, index) => {
+              const offset = index - currentImageIndex;
+              return (
+                <motion.div 
+                  key={index}
+                  className="absolute top-0 right-0 w-3/4 h-3/4 rounded-lg overflow-hidden shadow-xl border-2 border-white/20"
+                  initial={{ opacity: 0, scale: 0.8, x: 100 }}
+                  animate={{ 
+                    opacity: offset >= 0 ? 1 : 0,
+                    scale: 1 - (offset * 0.05),
+                    x: offset * 40,
+                    y: offset * 40,
+                    zIndex: images.length - offset,
+                    rotateZ: offset * 2
+                  }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <img 
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-full object-cover"
+                  />
+                </motion.div>
+              );
+            })}
           </motion.div>
         </div>
       </div>
