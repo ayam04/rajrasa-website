@@ -5,8 +5,7 @@ import { RoyalPattern, RoyalBorder } from './ui/RoyalPattern';
 
 export default function About() {
   return (
-    <section className="py-16 bg-white relative">
-      {/* <RoyalPattern /> */}
+    <section className="py-16 relative">
       <div className="container mx-auto px-4">
         <motion.div 
           className="max-w-3xl mx-auto text-center relative royal-corner"

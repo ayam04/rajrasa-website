@@ -28,7 +28,7 @@ export default function VideoSection() {
               playsInline
               className="absolute inset-0 w-full h-full object-cover"
             >
-              <source src="/cooking-video-1.mp4" type="video/mp4" />
+              <source src="/Gallery/v2.mp4" type="video/mp4" />
             </video>
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
             <div className="absolute bottom-0 left-0 p-6">
@@ -45,7 +45,7 @@ export default function VideoSection() {
               playsInline
               className="absolute inset-0 w-full h-full object-cover"
             >
-              <source src="/plating-video.mp4" type="video/mp4" />
+              <source src="/Gallery/v1.mp4" type="video/mp4" />
             </video>
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
             <div className="absolute bottom-0 left-0 p-6">
@@ -62,7 +62,7 @@ export default function VideoSection() {
               playsInline
               className="absolute inset-0 w-full h-full object-cover"
             >
-              <source src="/ambiance-video.mp4" type="video/mp4" />
+              <source src="/Gallery/v3.mp4" type="video/mp4" />
             </video>
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
             <div className="absolute bottom-0 left-0 p-6">
