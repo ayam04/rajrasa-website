@@ -14,7 +14,7 @@ export default function VideoSection() {
   const opacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
 
   return (
-    <section ref={ref} className="py-24 bg-dark-gray overflow-hidden">
+    <section ref={ref} className="py-24 bg-primary-blue overflow-hidden">
       <div className="container mx-auto px-4">
         <motion.div 
           style={{ scale, opacity }}

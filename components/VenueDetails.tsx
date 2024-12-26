@@ -2,12 +2,16 @@
 
 import { motion } from 'framer-motion';
 import { Phone, Mail, Clock, MapPin } from 'lucide-react';
+import FooterImg from "@/public/Place.jpg"
 
 export default function VenueDetails() {
   return (
     <section className="py-16 bg-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1590846406792-0adc7f938f1d')] bg-cover bg-center opacity-10" />
-      <div className="container mx-auto px-4 relative">
+      <div 
+        className="absolute inset-0 bg-cover bg-center opacity-10"
+        style={{ backgroundImage: `url(${FooterImg.src})` }}
+      />
+      <div className="container mx-auto px-4 relative text-2xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -30,7 +34,7 @@ export default function VenueDetails() {
             <div className="flex items-start space-x-4">
               <MapPin className="w-6 h-6 text-primary-gold mt-1" />
               <div>
-                <h3 className="font-abhaya text-2xl text-primary-blue mb-2">Location</h3>
+                <h3 className="font-abhaya text-4xl text-primary-blue mb-2">Location</h3>
                 <p className="font-abhaya text-dark-gray">
                   42, Civil Lines, Near Statue Circle<br />
                   Jaipur, Rajasthan 302006
@@ -41,7 +45,7 @@ export default function VenueDetails() {
             <div className="flex items-start space-x-4">
               <Clock className="w-6 h-6 text-primary-gold mt-1" />
               <div>
-                <h3 className="font-abhaya text-2xl text-primary-blue mb-2">Hours</h3>
+                <h3 className="font-abhaya text-4xl text-primary-blue mb-2">Hours</h3>
                 <p className="font-abhaya text-dark-gray">
                   Lunch: 12:00 PM - 3:30 PM<br />
                   Dinner: 7:00 PM - 11:00 PM
@@ -52,7 +56,7 @@ export default function VenueDetails() {
             <div className="flex items-start space-x-4">
               <Phone className="w-6 h-6 text-primary-gold mt-1" />
               <div>
-                <h3 className="font-abhaya text-2xl text-primary-blue mb-2">Contact</h3>
+                <h3 className="font-abhaya text-4xl text-primary-blue mb-2">Contact</h3>
                 <p className="font-abhaya text-dark-gray">
                   +91 141 234 5678<br />
                   +91 98765 43210
@@ -63,7 +67,7 @@ export default function VenueDetails() {
             <div className="flex items-start space-x-4">
               <Mail className="w-6 h-6 text-primary-gold mt-1" />
               <div>
-                <h3 className="font-abhaya text-2xl text-primary-blue mb-2">Email</h3>
+                <h3 className="font-abhaya text-4xl text-primary-blue mb-2">Email</h3>
                 <p className="font-abhaya text-dark-gray">
                   reservations@rajrasa.com<br />
                   info@rajrasa.com
@@ -81,7 +85,7 @@ export default function VenueDetails() {
           >
             <div className="aspect-square rounded-lg overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1590846406792-0adc7f938f1d" 
+                src={FooterImg.src} 
                 alt="Rajrasa Dining Area"
                 className="w-full h-full object-cover"
               />

@@ -16,8 +16,9 @@ export default function About() {
           viewport={{ once: true }}
         >
           <RoyalBorder />
-          <h2 className="font-abhaya text-5xl mb-6 text-primary-blue royal-divider">Our Story</h2>
-          <p className="font-abhaya text-lg leading-relaxed">
+          <h2 className="font-abhaya text-5xl mb-3 text-primary-blue royal-divider">Our Story</h2>
+          <div className="w-24 h-1 bg-primary-gold mx-auto" />
+          <p className="font-abhaya text-lg leading-relaxed mt-3">
             Nestled in the heart of Jaipur, Rajrasa brings you the authentic flavors of Rajasthan in a contemporary setting. Our culinary journey is crafted by Chef Saurabh, who combines traditional recipes with modern techniques to create an unforgettable dining experience.
           </p>
         </motion.div>
