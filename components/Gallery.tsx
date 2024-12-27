@@ -23,13 +23,11 @@ export default function Gallery() {
   const isInView = useInView(containerRef, { once: true, amount: 0.2 });
 
   useEffect(() => {
-    // Check if we have stored loaded images in sessionStorage
     const storedImages = sessionStorage.getItem('loadedGalleryImages');
     if (storedImages) {
       setLoadedImages(JSON.parse(storedImages));
     } else {
       setLoadedImages(images);
-      // Store loaded images in sessionStorage
       sessionStorage.setItem('loadedGalleryImages', JSON.stringify(images));
     }
   }, []);
@@ -53,7 +51,7 @@ export default function Gallery() {
           <div className="w-24 h-1 bg-primary-gold mx-auto" />
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 max-w-6xl mx-auto">
+        <div className="grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 max-w-6xl mx-auto hidden md:grid">
           {loadedImages.map((image, index) => (
             <motion.div
               key={image}
@@ -75,7 +73,29 @@ export default function Gallery() {
             </motion.div>
           ))}
         </div>
+
+        <div className="md:hidden overflow-x-auto snap-x snap-mandatory flex gap-4 pb-6">
+          {loadedImages.map((image, index) => (
+            <div
+              key={image}
+              className="snap-center shrink-0 first:pl-4 last:pr-4"
+            >
+              <div className="relative w-[300px] aspect-square overflow-hidden rounded-lg">
+                <Image
+                  src={image}
+                  alt={`Gallery image ${index + 1}`}
+                  fill
+                  sizes="300px"
+                  className="object-cover"
+                  loading="lazy"
+                  quality={75}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
 }
+

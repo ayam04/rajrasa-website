@@ -9,6 +9,8 @@ import VenueDetails from '@/components/VenueDetails';
 import VideoSection from '@/components/VideoSection';
 import Testimonials from '@/components/Testimonials';
 import Gallery from '@/components/Gallery';
+import SocialFollow from '@/components/Socials';
+
 import BG from '@/public/SectionBg.jpg'
 
 export default function Home() {
@@ -21,14 +23,21 @@ export default function Home() {
           style={{ backgroundImage: `url(${BG.src})` }}
         />
         <About />
-        <Gallery />
       </div>
+      <ChefSection />
       <VideoSection />
       {/* <Features /> */}
       {/* <Delicacies /> */}
-      <ChefSection />
       <Testimonials />
       <VenueDetails />
+      <div className="relative">
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-10"
+          style={{ backgroundImage: `url(${BG.src})` }}
+        />
+        <Gallery />
+        <SocialFollow />
+      </div>
     </main>
   );
 }
