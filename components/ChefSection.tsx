@@ -90,13 +90,13 @@ export default function ChefSection() {
                         whileHover={{ scale: 1.2, rotate: 360 }}
                         transition={{ duration: 0.8, type: "spring" }}
                       >
-                        <Crown 
+                        <Plane 
                           className="w-8 h-8 text-yellow-300 filter drop-shadow-lg"
                           strokeWidth={1.5}
                         />
                       </motion.div>
                       <div className="invisible group-hover:visible absolute left-1/2 -translate-x-1/2 -top-8 bg-black/80 text-white text-xs px-2 py-1 rounded whitespace-nowrap backdrop-blur-sm">
-                        Culinary Excellence
+                        Food Traveller
                       </div>
                     </div>
                   </motion.div>
@@ -189,13 +189,13 @@ export default function ChefSection() {
                         whileHover={{ scale: 1.2, rotate: 360 }}
                         transition={{ duration: 0.8, type: "spring" }}
                       >
-                        <Wheat 
+                        <Medal 
                           className="w-8 h-8 text-yellow-300 filter drop-shadow-lg"
                           strokeWidth={1.5}
                         />
                       </motion.div>
                       <div className="invisible group-hover:visible absolute left-1/2 -translate-x-1/2 -top-8 bg-black/80 text-white text-xs px-2 py-1 rounded whitespace-nowrap backdrop-blur-sm">
-                        Millet Innovation
+                        Gold
                       </div>
                     </div>
                   </motion.div>
@@ -214,7 +214,7 @@ export default function ChefSection() {
                         whileHover={{ scale: 1.2, rotate: 360 }}
                         transition={{ duration: 0.8, type: "spring" }}
                       >
-                        <Globe2 
+                        <ChefHat 
                           className="w-8 h-8 text-yellow-300 filter drop-shadow-lg"
                           strokeWidth={1.5}
                         />
