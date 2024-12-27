@@ -6,23 +6,23 @@ import BG from '@/public/SectionBg.jpg';
 
 const testimonials = [
   {
-    name: "Priya Sharma",
-    role: "Food Critic",
-    text: "The Dal Baati Churma here is absolutely divine. Authentic Rajasthani flavors that transport you to the royal kitchens.",
+    name: "Anoop Shekhawat",
+    role: "Customer",
+    text: "It's a must-visit place, and as a tourism professional, I highly recommend it to anyone who loves Rajasthani cuisine. Kudos to Chef Saurabh, Chef Prateek, and the entire team!",
     rating: 5,
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330"
   },
   {
-    name: "Rajat Mehta",
-    role: "Food Blogger",
-    text: "Chef Saurabh's innovative take on traditional recipes is remarkable. The ambiance perfectly complements the royal dining experience.",
+    name: "Chef Rahul Wali",
+    role: "Renowned Chef",
+    text: "If anyone looking to have true traditional flavours of Rajasthan in Jaipur, let me tell you RAJRASA is the only destination for you.",
     rating: 5,
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e"
   },
   {
-    name: "Aisha Khan",
-    role: "Restaurant Reviewer",
-    text: "Every dish tells a story of Rajasthan's rich culinary heritage. The presentation is as royal as the taste.",
+    name: "Ankit Kashmiri",
+    role: "Customer",
+    text: "The restaurants interiors and architectural style gives a perfect ambience to the food being served. If you are in Jaipur, as a culinary enthusiast don't miss out on this one.",
     rating: 5,
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80"
   }
@@ -60,11 +60,9 @@ export default function Testimonials() {
             >
               <div className="absolute top-0 right-0 w-24 h-24 bg-light-pink/10 rounded-bl-full" />
               <div className="flex items-center mb-6">
-                <img
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                  className="w-16 h-16 rounded-full object-cover mr-4"
-                />
+                <span className="w-16 h-16 rounded-full bg-pink-100 flex items-center justify-center text-xl font-bold text-primary-blue mr-4">
+                  {testimonial.name.charAt(0)}
+                </span>
                 <div>
                   <h3 className="font-abhaya text-xl text-primary-blue">{testimonial.name}</h3>
                   <p className="font-abhaya text-sm text-primary-gold">{testimonial.role}</p>
