@@ -58,7 +58,7 @@ export default function Gallery() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative aspect-square group overflow-hidden rounded-lg max-w-[400px] mx-auto w-full"
+              className="relative group overflow-hidden rounded-lg max-w-[800px] mx-auto w-full h-[400px]"
             >
               <Image
                 src={image}
@@ -78,9 +78,9 @@ export default function Gallery() {
           {loadedImages.map((image, index) => (
             <div
               key={image}
-              className="snap-center shrink-0 first:pl-4 last:pr-4"
+              className="snap-center shrink-0 first:pl-4 last:pr-4 w-[300px] h-[400px]"
             >
-              <div className="relative w-[300px] aspect-square overflow-hidden rounded-lg">
+              <div className="relative w-full h-full overflow-hidden rounded-lg">
                 <Image
                   src={image}
                   alt={`Gallery image ${index + 1}`}

@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import { BookOpen, Star, Globe2, Crown, Scroll, Wheat, Plane, ChefHat, Trophy, Award, Medal, Tv } from 'lucide-react';
+import { Scroll, Plane, ChefHat, Trophy, Award, Medal, Tv } from 'lucide-react';
 
 export default function ChefSection() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -19,6 +19,10 @@ export default function ChefSection() {
     {
       src: "Gallery/chef3.jpg",
       alt: "Final presentation"
+    },
+    {
+      src: "Gallery/chef3.jpg",
+      alt: "Final presentation"
     }
   ];
 
@@ -29,21 +33,6 @@ export default function ChefSection() {
 
     return () => clearInterval(interval);
   }, []);
-
-  const iconAnimation = {
-    initial: { 
-      opacity: 0, 
-      scale: 0.5
-    },
-    animate: { 
-      opacity: 1, 
-      scale: 1,
-      transition: {
-        duration: 0.5,
-        ease: [0.23, 1, 0.32, 1]
-      }
-    }
-  };
 
   return (
     <section className="py-16 bg-primary-blue text-white relative overflow-hidden">
@@ -78,30 +67,8 @@ export default function ChefSection() {
                 transition={{ delay: 0.4 }}
               >
                 <div className="flex items-start gap-4">
-                  <motion.div
-                    variants={iconAnimation}
-                    initial="initial"
-                    whileInView="animate"
-                    viewport={{ once: true }}
-                    className="flex-shrink-0 mt-1"
-                  >
-                    <div className="group relative">
-                      <motion.div
-                        whileHover={{ scale: 1.2, rotate: 360 }}
-                        transition={{ duration: 0.8, type: "spring" }}
-                      >
-                        <Plane 
-                          className="w-8 h-8 text-yellow-300 filter drop-shadow-lg"
-                          strokeWidth={1.5}
-                        />
-                      </motion.div>
-                      <div className="invisible group-hover:visible absolute left-1/2 -translate-x-1/2 -top-8 bg-black/80 text-white text-xs px-2 py-1 rounded whitespace-nowrap backdrop-blur-sm">
-                        Food Traveller
-                      </div>
-                    </div>
-                  </motion.div>
                   <p className="leading-relaxed text-sm md:text-base">
-                    A Chef, Author, TV Show Host, Culinary Mentor & Humanitarian, Chef (Dr.) Saurabh Sharma is a celebrated culinary expert and educator renowned for promoting Rajasthani cuisine on global platforms, including as a <span className="font-bold text-pink-200 inline-flex items-center gap-1">
+                    A Chef, Author, TV Show Host, Culinary Mentor & Humanitarian, Chef (Dr.) Saurabh Sharma is a celebrated culinary expert and educator renowned for promoting Rajasthani cuisine on global platforms, including as a <span className="font-bold text-pink-200 inline items-center gap-1">
                       <Plane className="w-4 h-4 inline" /> Food Traveller
                     </span>.
                   </p>
@@ -109,13 +76,13 @@ export default function ChefSection() {
                 
                 <div className="flex items-center gap-2 md:gap-4 mt-2">
                   <p className="leading-relaxed text-sm md:text-base">
-                    With over 17 years of experience, he has hosted the popular <span className="font-bold text-pink-200 inline-flex items-center gap-1">
+                    With over 17 years of experience, he has hosted the popular <span className="font-bold text-pink-200 inline items-center gap-1">
                       <Tv className="w-4 h-4 inline" /> TV show "Rajasthani Rasoi"
-                    </span> on FoodXp, served as a <span className="font-bold text-pink-200 inline-flex items-center gap-1">
+                    </span> on FoodXp, served as a <span className="font-bold text-pink-200 inline items-center gap-1">
                       <Trophy className="w-4 h-4 inline" /> jury member for MasterChef India
                     </span>, and conducted live cooking demonstrations at prestigious events like Bharat Parv.
                   </p>
-                  <motion.div
+                  {/* <motion.div
                     variants={iconAnimation}
                     initial="initial"
                     whileInView="animate"
@@ -136,11 +103,11 @@ export default function ChefSection() {
                         Ambassador of Taste
                       </div>
                     </div>
-                  </motion.div>
+                  </motion.div> */}
                 </div>
                 
                 <div className="flex items-start gap-4 mt-4">
-                  <motion.div
+                  {/* <motion.div
                     variants={iconAnimation}
                     initial="initial"
                     whileInView="animate"
@@ -161,9 +128,9 @@ export default function ChefSection() {
                         Ph.D. in Culinary Heritage
                       </div>
                     </div>
-                  </motion.div>
+                  </motion.div> */}
                   <p className="leading-relaxed text-sm md:text-base">
-                    A prolific <span className="font-bold text-pink-200 inline-flex items-center gap-1">
+                    A prolific <span className="font-bold text-pink-200 inline items-center gap-1">
                       <Scroll className="w-4 h-4 inline" /> researcher
                     </span> and author, Dr. Sharma holds a Ph.D. in Rajasthani culinary heritage and has published 22+ research papers, securing patents and copyrights in the culinary arts.
                   </p>
@@ -171,13 +138,13 @@ export default function ChefSection() {
                 
                 <div className="flex items-center gap-4 mt-4">
                   <p className="leading-relaxed text-sm md:text-base">
-                    He has received numerous accolades, including the <span className="font-bold text-pink-200 inline-flex items-center gap-1">
+                    He has received numerous accolades, including the <span className="font-bold text-pink-200 inline items-center gap-1">
                       <Award className="w-4 h-4 inline" /> Ambassador of Taste
-                    </span> award and a <span className="font-bold text-pink-200 inline-flex items-center gap-1">
+                    </span> award and a <span className="font-bold text-pink-200 inline items-center gap-1">
                       <Medal className="w-4 h-4 inline" /> Gold Medal
                     </span> from a Gastronomy organization in Greece. As a culinary mentor, he fosters future culinary talents.
                   </p>
-                  <motion.div
+                  {/* <motion.div
                     variants={iconAnimation}
                     initial="initial"
                     whileInView="animate"
@@ -198,11 +165,11 @@ export default function ChefSection() {
                         Gold
                       </div>
                     </div>
-                  </motion.div>
+                  </motion.div> */}
                 </div>
                 
                 <div className="flex items-start gap-4 mt-4">
-                <motion.div
+                {/* <motion.div
                     variants={iconAnimation}
                     initial="initial"
                     whileInView="animate"
@@ -223,9 +190,9 @@ export default function ChefSection() {
                         Master Chef
                       </div>
                     </div>
-                  </motion.div>
+                  </motion.div> */}
                   <p className="leading-relaxed text-sm md:text-base">
-                    He is also the co-founder of <span className="font-bold text-pink-200 inline-flex items-center gap-1">
+                    He is also the co-founder of <span className="font-bold text-pink-200 inline items-center gap-1">
                       <ChefHat className="w-4 h-4 inline" /> 'Master Chef Rajasthan'
                     </span> and a pioneer in millet promotion under the Prime Minister's Millet Mission. His passion lies in blending heritage, sustainability, and innovation in every culinary endeavor.
                   </p>
@@ -235,7 +202,7 @@ export default function ChefSection() {
           </motion.div>
           
           <motion.div
-            className="relative h-[300px] md:h-[600px]"
+            className="relative h-[300px] md:h-[600px] flex justify-center"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -246,7 +213,7 @@ export default function ChefSection() {
               return (
                 <motion.div 
                   key={index}
-                  className="absolute top-0 right-0 w-3/4 h-3/4 rounded-lg overflow-hidden shadow-2xl border-2 border-white/20"
+                  className="absolute top-0 left-1/5 w-3/4 h-3/4 rounded-lg overflow-hidden shadow-2xl border-2 border-white/20"
                   initial={{ opacity: 0, scale: 0.8, x: 100 }}
                   animate={{ 
                     opacity: offset >= 0 ? 1 : 0,

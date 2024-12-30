@@ -2,8 +2,6 @@
 
 import Hero from '@/components/Hero';
 import About from '@/components/About';
-// import Features from '@/components/Features';
-// import Delicacies from '@/components/Delicacies';
 import ChefSection from '@/components/ChefSection';
 import VenueDetails from '@/components/VenueDetails';
 import VideoSection from '@/components/VideoSection';
@@ -26,8 +24,13 @@ export default function Home() {
       </div>
       <ChefSection />
       <VideoSection />
-      {/* <Features /> */}
-      {/* <Delicacies /> */}
+      <div className="relative">
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-10"
+          style={{ backgroundImage: `url(${BG.src})` }}
+        />
+        <Gallery />
+      </div>
       <Testimonials />
       <VenueDetails />
       <div className="relative">
@@ -35,7 +38,6 @@ export default function Home() {
           className="absolute inset-0 bg-cover bg-center opacity-10"
           style={{ backgroundImage: `url(${BG.src})` }}
         />
-        <Gallery />
         <SocialFollow />
       </div>
     </main>
