@@ -11,7 +11,7 @@ export default function VenueDetails() {
         className="absolute inset-0 bg-cover bg-center opacity-10"
         style={{ backgroundImage: `url(${FooterImg.src})` }}
       />
-      <div className="container mx-auto px-4 relative text-2xl">
+      <div className="container mx-auto px-4 relative">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -23,7 +23,8 @@ export default function VenueDetails() {
           <div className="w-24 h-1 bg-primary-gold mx-auto" />
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+          {/* Contact Information */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -32,10 +33,10 @@ export default function VenueDetails() {
             className="space-y-8"
           >
             <div className="flex items-start space-x-4">
-              <MapPin className="w-6 h-6 text-primary-gold mt-1" />
+              <MapPin className="w-6 h-6 text-primary-gold mt-1 flex-shrink-0" />
               <div>
                 <h3 className="font-abhaya text-4xl text-primary-blue mb-2">Location</h3>
-                <p className="font-abhaya text-dark-gray">
+                <p className="font-abhaya text-dark-gray text-2xl">
                   42, Civil Lines, Near Statue Circle<br />
                   Jaipur, Rajasthan 302006
                 </p>
@@ -43,10 +44,10 @@ export default function VenueDetails() {
             </div>
 
             <div className="flex items-start space-x-4">
-              <Clock className="w-6 h-6 text-primary-gold mt-1" />
+              <Clock className="w-6 h-6 text-primary-gold mt-1 flex-shrink-0" />
               <div>
                 <h3 className="font-abhaya text-4xl text-primary-blue mb-2">Hours</h3>
-                <p className="font-abhaya text-dark-gray">
+                <p className="font-abhaya text-dark-gray text-2xl">
                   Lunch: 12:00 PM - 3:30 PM<br />
                   Dinner: 7:00 PM - 11:00 PM
                 </p>
@@ -54,10 +55,10 @@ export default function VenueDetails() {
             </div>
 
             <div className="flex items-start space-x-4">
-              <Phone className="w-6 h-6 text-primary-gold mt-1" />
+              <Phone className="w-6 h-6 text-primary-gold mt-1 flex-shrink-0" />
               <div>
                 <h3 className="font-abhaya text-4xl text-primary-blue mb-2">Contact</h3>
-                <p className="font-abhaya text-dark-gray">
+                <p className="font-abhaya text-dark-gray text-2xl">
                   +91 141 234 5678<br />
                   +91 98765 43210
                 </p>
@@ -65,10 +66,10 @@ export default function VenueDetails() {
             </div>
 
             <div className="flex items-start space-x-4">
-              <Mail className="w-6 h-6 text-primary-gold mt-1" />
+              <Mail className="w-6 h-6 text-primary-gold mt-1 flex-shrink-0" />
               <div>
                 <h3 className="font-abhaya text-4xl text-primary-blue mb-2">Email</h3>
-                <p className="font-abhaya text-dark-gray">
+                <p className="font-abhaya text-dark-gray text-2xl">
                   reservations@rajrasa.com<br />
                   info@rajrasa.com
                 </p>
@@ -76,12 +77,38 @@ export default function VenueDetails() {
             </div>
           </motion.div>
 
+          {/* Map Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="relative lg:col-span-2 h-[600px] rounded-lg overflow-hidden"
+          >
+            <div className="absolute inset-0 rounded-lg overflow-hidden">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d889.2032150037803!2d75.83708022854049!3d26.941146598533326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db100057c979b%3A0x5a5f7132d5483e8a!2sRajRasa%20by%20Chef%20Saurabh!5e0!3m2!1sen!2sin!4v1735576113544!5m2!1sen!2sin" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }} 
+                allowFullScreen 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                className="absolute inset-0"
+              />
+            </div>
+            {/* Decorative elements */}
+            <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-primary-blue rounded-lg -z-10" />
+            <div className="absolute -top-6 -left-6 w-48 h-48 bg-primary-gold rounded-lg -z-10 opacity-50" />
+          </motion.div>
+
+          {/* Restaurant Image - Now shown below on mobile */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="relative"
+            className="relative lg:hidden"
           >
             <div className="aspect-square rounded-lg overflow-hidden">
               <img 

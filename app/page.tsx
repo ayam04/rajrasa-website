@@ -30,8 +30,8 @@ export default function Home() {
           style={{ backgroundImage: `url(${BG.src})` }}
         />
         <Gallery />
+        <Testimonials />
       </div>
-      <Testimonials />
       <VenueDetails />
       <div className="relative">
         <div 

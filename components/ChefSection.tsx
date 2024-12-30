@@ -13,7 +13,7 @@ export default function ChefSection() {
       alt: "Kitchen preparation"
     },
     {
-      src: "Gallery/chef2.jpg",
+      src: "Gallery/chef4.jpg",
       alt: "Plating"
     },
     {
@@ -21,9 +21,13 @@ export default function ChefSection() {
       alt: "Final presentation"
     },
     {
-      src: "Gallery/chef3.jpg",
+      src: "Gallery/chef5.jpg",
       alt: "Final presentation"
-    }
+    },
+    {
+      src: "Gallery/chef2.jpg",
+      alt: "Final presentation"
+    },
   ];
 
   useEffect(() => {

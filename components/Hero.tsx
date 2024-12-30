@@ -16,15 +16,11 @@ export default function Hero() {
     const message = `Hello! I would like to make a reservation at RajRasa:\n\nName: ${name}\nDate: ${date}\nNumber of people: ${people}`;
     const phoneNumber = '919799905867';
     
-    // Use the correct WhatsApp URL format
     const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
     const windowRef = window.open(whatsappUrl, '_blank');
     
-    // Check if window opened successfully
     if (!windowRef || windowRef.closed || typeof windowRef.closed === 'undefined') {
-      // If primary method fails, show fallback options
       setShowFallback(true);
-      // Copy message to clipboard as a fallback
       navigator.clipboard.writeText(message).then(() => {
         alert('Message copied to clipboard! You can paste it in WhatsApp.');
       });
@@ -37,14 +33,12 @@ export default function Hero() {
     const message = `Hello! I would like to make a reservation at RajRasa:\n\nName: ${name}\nDate: ${date}\nNumber of people: ${people}`;
     const phoneNumber = '919799905867';
     
-    // Try alternative WhatsApp URLs
     const alternativeUrls = [
       `whatsapp://send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`,
       `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`,
       `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`
     ];
     
-    // Try each URL in sequence
     for (const url of alternativeUrls) {
       try {
         window.location.href = url;
@@ -71,7 +65,6 @@ export default function Hero() {
       />
       <div className="absolute inset-0 bg-black/40 z-10" />
       
-      {/* Main Content */}
       <div className="relative z-20 text-center text-white">
         <motion.img 
           src={Logo.src}
@@ -112,7 +105,6 @@ export default function Hero() {
         </motion.button>
       </div>
 
-      {/* Enhanced Modal */}
       {isOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
           <motion.div 
