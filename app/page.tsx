@@ -8,7 +8,7 @@ import VideoSection from '@/components/VideoSection';
 import Testimonials from '@/components/Testimonials';
 import Gallery from '@/components/Gallery';
 import SocialFollow from '@/components/Socials';
-
+import AboutBG from '@/public/AboutBG.jpg'
 import BG from '@/public/SectionBg.jpg'
 
 export default function Home() {
@@ -17,8 +17,13 @@ export default function Home() {
       <Hero />
       <div className="relative">
         <div 
-          className="absolute inset-0 bg-cover bg-center opacity-10"
-          style={{ backgroundImage: `url(${BG.src})` }}
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ 
+            backgroundImage: `url(${AboutBG.src})`, 
+            backgroundAttachment: 'fixed',
+            backgroundPosition: 'center',
+            backgroundSize: 'cover'
+          }}
         />
         <About />
       </div>

@@ -13,9 +13,9 @@ export default function About() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="font-abhaya text-5xl mb-6 text-primary-blue royal-divider">Our Philosophy</h2>
+          <h2 className="font-abhaya text-5xl mb-6 text-white royal-divider">Our Philosophy</h2>
           <div className="w-24 h-1 bg-primary-gold mx-auto mb-8" />
-          <div className="space-y-6">
+          <div className="space-y-6 text-white">
             <p className="font-abhaya text-xl leading-relaxed">
               RAJRASA, derived from Sanskrit 'रस' (rasa), embodies the essence of royal Rajasthani cuisine. In ancient Vedic literature, rasa signifies not just taste, but the very essence of consciousness and self-luminous awareness.
             </p>
