@@ -24,7 +24,6 @@ export default function VenueDetails() {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
-          {/* Contact Information */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -37,8 +36,8 @@ export default function VenueDetails() {
               <div>
                 <h3 className="font-abhaya text-4xl text-primary-blue mb-2">Location</h3>
                 <p className="font-abhaya text-dark-gray text-2xl">
-                  42, Civil Lines, Near Statue Circle<br />
-                  Jaipur, Rajasthan 302006
+                  RajRasa, S-19, 20, 21, Nagar Nigam Colony<br />
+                  Amer Road, Jaipur, Rajasthan 302002
                 </p>
               </div>
             </div>
@@ -59,8 +58,8 @@ export default function VenueDetails() {
               <div>
                 <h3 className="font-abhaya text-4xl text-primary-blue mb-2">Contact</h3>
                 <p className="font-abhaya text-dark-gray text-2xl">
-                  +91 141 234 5678<br />
-                  +91 98765 43210
+                  +91 9799905867<br />
+                  +91 9530384175
                 </p>
               </div>
             </div>
@@ -70,14 +69,13 @@ export default function VenueDetails() {
               <div>
                 <h3 className="font-abhaya text-4xl text-primary-blue mb-2">Email</h3>
                 <p className="font-abhaya text-dark-gray text-2xl">
-                  reservations@rajrasa.com<br />
-                  info@rajrasa.com
+                  rajrasa303@gmail.com<br />
+                  {/* info@rajrasa.com */}
                 </p>
               </div>
             </div>
           </motion.div>
 
-          {/* Map Section */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -97,12 +95,10 @@ export default function VenueDetails() {
                 className="absolute inset-0"
               />
             </div>
-            {/* Decorative elements */}
             <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-primary-blue rounded-lg -z-10" />
             <div className="absolute -top-6 -left-6 w-48 h-48 bg-primary-gold rounded-lg -z-10 opacity-50" />
           </motion.div>
 
-          {/* Restaurant Image - Now shown below on mobile */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}

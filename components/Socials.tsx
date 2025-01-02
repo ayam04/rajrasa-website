@@ -32,7 +32,7 @@ export default function SocialFollow() {
           
           <div className="flex justify-center space-x-6 mb-8">
             <motion.a 
-              href="https://instagram.com"
+              href="https://www.instagram.com/rajrasajaipur"
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary-blue hover:text-primary-gold transition-colors duration-300"
@@ -43,18 +43,7 @@ export default function SocialFollow() {
               <span className="sr-only">Instagram</span>
             </motion.a>
             <motion.a 
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary-blue hover:text-primary-gold transition-colors duration-300"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <Linkedin size={32} />
-              <span className="sr-only">LinkedIn</span>
-            </motion.a>
-            <motion.a 
-              href="mailto:contact@example.com"
+              href="mailto:rajrasa303@gmail.com"
               className="text-primary-blue hover:text-primary-gold transition-colors duration-300"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -92,6 +81,12 @@ export default function SocialFollow() {
             </motion.p>
           )}
         </motion.div>
+        
+        <footer className="text-center mt-10">
+          <p className="text-gray-600">
+            &copy; {new Date().getFullYear()} RajRasa. All rights reserved.
+          </p>
+        </footer>
       </div>
     </section>
   );

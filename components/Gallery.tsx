@@ -4,17 +4,17 @@ import { motion, useInView } from 'framer-motion';
 import { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
 
-const images = [
-  "Gallery/1.jpg",
-  "Gallery/4.jpg",
-  "Gallery/7.jpg",
-  "Gallery/3.jpg",
-  "Gallery/5.jpg",
-  "Gallery/6.jpg",
-  "Gallery/2.jpg",
-  "Gallery/8.jpg",
-  "Gallery/9.jpg"
-].map(url => `${url}?auto=format,compress&q=75&w=800`);
+// const images = [
+//   "Gallery/7.jpg",
+//   "Gallery/4.jpg",
+//   "Gallery/3.jpg",
+//   "Gallery/5.jpg",
+//   "Gallery/6.jpg",
+//   "Gallery/1.jpg",
+//   "Gallery/8.jpg",
+//   "Gallery/2.jpg",
+//   "Gallery/9.jpg"
+// ].map(url => `${url}?auto=format,compress&q=75&w=800`);
 
 export default function Gallery() {
   const [loadedImages, setLoadedImages] = useState<string[]>([]);
@@ -27,8 +27,20 @@ export default function Gallery() {
     if (storedImages) {
       setLoadedImages(JSON.parse(storedImages));
     } else {
-      setLoadedImages(images);
-      sessionStorage.setItem('loadedGalleryImages', JSON.stringify(images));
+      const orderedImages = [
+        "Gallery/7.jpg",
+        "Gallery/4.jpg",
+        "Gallery/3.jpg",
+        "Gallery/5.jpg",
+        "Gallery/6.jpg",
+        "Gallery/1.jpg",
+        "Gallery/8.jpg",
+        "Gallery/2.jpg",
+        "Gallery/9.jpg"
+      ].map(url => `${url}?auto=format,compress&q=75&w=800`);
+      
+      setLoadedImages(orderedImages);
+      sessionStorage.setItem('loadedGalleryImages', JSON.stringify(orderedImages));
     }
   }, []);
 
