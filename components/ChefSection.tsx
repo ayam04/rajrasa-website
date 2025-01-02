@@ -30,6 +30,20 @@ export default function ChefSection() {
     },
   ];
 
+  const achievements = [
+    {
+      logo: "Gallery/Foodxp.png",
+      text: "Hosted the popular TV show - Rajasthani Rasoi on FoodXp"
+    },
+    {
+      logo: "Gallery/masterchef.png", 
+      text: "Jury Member for MasterChef India & Co-Founder of Master Chef Rajasthan"
+    },
+    {
+      text: "Ph.D. in Rajasthani Culinary Heritage"
+    }
+  ];
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
@@ -41,7 +55,7 @@ export default function ChefSection() {
   return (
     <section className="py-16 bg-primary-blue text-white relative overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -86,53 +100,9 @@ export default function ChefSection() {
                       <Trophy className="w-4 h-4 inline" /> jury member for MasterChef India
                     </span>, and conducted live cooking demonstrations at prestigious events like Bharat Parv.
                   </p>
-                  {/* <motion.div
-                    variants={iconAnimation}
-                    initial="initial"
-                    whileInView="animate"
-                    viewport={{ once: true }}
-                    className="flex-shrink-0"
-                  >
-                    <div className="group relative">
-                      <motion.div
-                        whileHover={{ scale: 1.2, rotate: 360 }}
-                        transition={{ duration: 0.8, type: "spring" }}
-                      >
-                        <Star 
-                          className="w-8 h-8 text-yellow-300 filter drop-shadow-lg"
-                          strokeWidth={1.5}
-                        />
-                      </motion.div>
-                      <div className="invisible group-hover:visible absolute left-1/2 -translate-x-1/2 -top-8 bg-black/80 text-white text-xs px-2 py-1 rounded whitespace-nowrap backdrop-blur-sm">
-                        Ambassador of Taste
-                      </div>
-                    </div>
-                  </motion.div> */}
                 </div>
                 
                 <div className="flex items-start gap-4 mt-4">
-                  {/* <motion.div
-                    variants={iconAnimation}
-                    initial="initial"
-                    whileInView="animate"
-                    viewport={{ once: true }}
-                    className="flex-shrink-0 mt-1"
-                  >
-                    <div className="group relative">
-                      <motion.div
-                        whileHover={{ scale: 1.2, rotate: 360 }}
-                        transition={{ duration: 0.8, type: "spring" }}
-                      >
-                        <BookOpen 
-                          className="w-8 h-8 text-yellow-300 filter drop-shadow-lg"
-                          strokeWidth={1.5}
-                        />
-                      </motion.div>
-                      <div className="invisible group-hover:visible absolute left-1/2 -translate-x-1/2 -top-8 bg-black/80 text-white text-xs px-2 py-1 rounded whitespace-nowrap backdrop-blur-sm">
-                        Ph.D. in Culinary Heritage
-                      </div>
-                    </div>
-                  </motion.div> */}
                   <p className="leading-relaxed text-sm md:text-base">
                     A prolific <span className="font-bold text-pink-200 inline items-center gap-1">
                       <Scroll className="w-4 h-4 inline" /> researcher
@@ -148,53 +118,9 @@ export default function ChefSection() {
                       <Medal className="w-4 h-4 inline" /> Gold Medal
                     </span> from a Gastronomy organization in Greece. As a culinary mentor, he fosters future culinary talents.
                   </p>
-                  {/* <motion.div
-                    variants={iconAnimation}
-                    initial="initial"
-                    whileInView="animate"
-                    viewport={{ once: true }}
-                    className="flex-shrink-0"
-                  >
-                    <div className="group relative">
-                      <motion.div
-                        whileHover={{ scale: 1.2, rotate: 360 }}
-                        transition={{ duration: 0.8, type: "spring" }}
-                      >
-                        <Medal 
-                          className="w-8 h-8 text-yellow-300 filter drop-shadow-lg"
-                          strokeWidth={1.5}
-                        />
-                      </motion.div>
-                      <div className="invisible group-hover:visible absolute left-1/2 -translate-x-1/2 -top-8 bg-black/80 text-white text-xs px-2 py-1 rounded whitespace-nowrap backdrop-blur-sm">
-                        Gold
-                      </div>
-                    </div>
-                  </motion.div> */}
                 </div>
                 
                 <div className="flex items-start gap-4 mt-4">
-                {/* <motion.div
-                    variants={iconAnimation}
-                    initial="initial"
-                    whileInView="animate"
-                    viewport={{ once: true }}
-                    className="flex-shrink-0 mt-1"
-                  >
-                    <div className="group relative">
-                      <motion.div
-                        whileHover={{ scale: 1.2, rotate: 360 }}
-                        transition={{ duration: 0.8, type: "spring" }}
-                      >
-                        <ChefHat 
-                          className="w-8 h-8 text-yellow-300 filter drop-shadow-lg"
-                          strokeWidth={1.5}
-                        />
-                      </motion.div>
-                      <div className="invisible group-hover:visible absolute left-1/2 -translate-x-1/2 -top-8 bg-black/80 text-white text-xs px-2 py-1 rounded whitespace-nowrap backdrop-blur-sm">
-                        Master Chef
-                      </div>
-                    </div>
-                  </motion.div> */}
                   <p className="leading-relaxed text-sm md:text-base">
                     He is also the co-founder of <span className="font-bold text-pink-200 inline items-center gap-1">
                       <ChefHat className="w-4 h-4 inline" /> 'Master Chef Rajasthan'
@@ -202,11 +128,43 @@ export default function ChefSection() {
                   </p>
                 </div>
               </motion.div>
+
+              <motion.div 
+                className="grid grid-cols-3 gap-4 mt-8 pt-8"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6 }}
+              >
+                {achievements.map((achievement, index) => (
+                  <motion.div
+                    key={index}
+                    className="flex flex-col items-center text-center"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.1 * index + 0.6 }}
+                  >
+                    {achievement.logo ? (
+                      <div className="w-16 h-16 md:w-20 md:h-20 mb-3 rounded-full p-2 flex items-center justify-center border-2 border-white">
+                        <img
+                          src={achievement.logo}
+                          alt={achievement.text}
+                          className="w-full h-full object-contain filter brightness-0 invert"
+                        />
+                      </div>
+                    ) : (
+                      <div className="w-16 h-16 md:w-20 md:h-20 mb-3 rounded-full p-2 flex items-center justify-center text-white font-bold text-lg md:text-2xl border-2 border-white">
+                        Ph.D.
+                      </div>
+                    )}
+                    <p className="text-xs md:text-sm text-white">{achievement.text}</p>
+                  </motion.div>
+                ))}
+              </motion.div>
             </div>
           </motion.div>
           
           <motion.div
-            className="relative h-[300px] md:h-[600px] flex justify-center"
+            className="relative h-[300px] md:h-[600px] flex justify-center mt-8 md:mt-12"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -217,7 +175,7 @@ export default function ChefSection() {
               return (
                 <motion.div 
                   key={index}
-                  className="absolute top-0 left-1/5 w-3/4 h-3/4 rounded-lg overflow-hidden shadow-2xl border-2 border-white/20"
+                  className="absolute top-10 left-1/5 w-3/4 h-3/4 rounded-lg overflow-hidden shadow-2xl border-2 border-white/20"
                   initial={{ opacity: 0, scale: 0.8, x: 100 }}
                   animate={{ 
                     opacity: offset >= 0 ? 1 : 0,
@@ -243,3 +201,4 @@ export default function ChefSection() {
     </section>
   );
 }
+
