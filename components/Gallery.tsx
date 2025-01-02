@@ -3,18 +3,7 @@
 import { motion, useInView } from 'framer-motion';
 import { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
-
-// const images = [
-//   "Gallery/7.jpg",
-//   "Gallery/4.jpg",
-//   "Gallery/3.jpg",
-//   "Gallery/5.jpg",
-//   "Gallery/6.jpg",
-//   "Gallery/1.jpg",
-//   "Gallery/8.jpg",
-//   "Gallery/2.jpg",
-//   "Gallery/9.jpg"
-// ].map(url => `${url}?auto=format,compress&q=75&w=800`);
+import Logo from "@/public/RajRasaLogo.png";
 
 export default function Gallery() {
   const [loadedImages, setLoadedImages] = useState<string[]>([]);
@@ -80,8 +69,18 @@ export default function Gallery() {
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
                 loading="lazy"
                 quality={75}
+                draggable="false"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              
+              <div className="absolute bottom-2 right-2 w-16 h-16">
+                <Image
+                  src={Logo.src}
+                  alt="Raj Rasa Logo"
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </div>
             </motion.div>
           ))}
         </div>
@@ -100,8 +99,18 @@ export default function Gallery() {
                   sizes="300px"
                   className="object-cover"
                   loading="lazy"
-                  quality={75}
+                  quality={100}
+                  draggable="false"
                 />
+                {/* Added logo container for mobile */}
+                <div className="absolute bottom-2 right-2 w-12 h-12">
+                  <Image
+                    src={Logo.src}
+                    alt="Raj Rasa Logo"
+                    layout="fill"
+                    objectFit="contain"
+                  />
+                </div>
               </div>
             </div>
           ))}
@@ -110,4 +119,3 @@ export default function Gallery() {
     </section>
   );
 }
-
