@@ -40,13 +40,15 @@ export default function Home() {
             style={{ backgroundImage: `url(${BG.src})` }}
           />
           <Gallery />
-          <Testimonials />
+          <section id="testimonials">
+            <Testimonials />
+          </section>
         </div>
       </section>
       <section id="venue">
         <VenueDetails />
       </section>
-      <section id="testimonials">
+      <section>
         <div className="relative">
           <div 
             className="absolute inset-0 bg-cover bg-center opacity-10"
