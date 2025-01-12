@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Logo from "@/public/RajRasaLogo.png";
 import BGImage from "@/public/BG.jpg";
 
@@ -12,6 +12,15 @@ export default function Hero() {
   const [name, setName] = useState('');
   const [showFallback, setShowFallback] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [contentLoaded, setContentLoaded] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setContentLoaded(true);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleReservation = () => {
     const message = `Hello! I would like to make a reservation at RajRasa:\n\nName: ${name}\nDate: ${date}\nNumber of people: ${people}`;
@@ -107,17 +116,19 @@ export default function Hero() {
       </div>
 
       {/* Vertical Navbar for Desktop */}
-      <div className="absolute right-16 top-1/2 transform -translate-y-1/2 z-30 md:flex items-center hidden">
-        <nav className="flex flex-col space-y-8 text-xl font-abhaya mr-6">
-          <a href="#about" className="text-white hover:text-primary-gold transition duration-300">About</a>
-          <a href="#chef" className="text-white hover:text-primary-gold transition duration-300">Chef</a>
-          <a href="#venue" className="text-white hover:text-primary-gold transition duration-300">Venue</a>
-          <a href="#gallery" className="text-white hover:text-primary-gold transition duration-300">Gallery</a>
-          <a href="#testimonials" className="text-white hover:text-primary-gold transition duration-300">Testimonials</a>
-          <a href="#contact" className="text-white hover:text-primary-gold transition duration-300">Contact</a>
-        </nav>
-        <div className="h-64 w-px bg-white opacity-50" /> {/* Adjusted vertical line */}
-      </div>
+      {contentLoaded && (
+        <div className="absolute right-16 top-1/2 transform -translate-y-1/2 z-30 md:flex items-center hidden">
+          <nav className="flex flex-col space-y-8 text-xl font-abhaya mr-6">
+            <a href="#about" className="text-white hover:text-primary-gold transition duration-300">About</a>
+            <a href="#chef" className="text-white hover:text-primary-gold transition duration-300">Chef</a>
+            <a href="#venue" className="text-white hover:text-primary-gold transition duration-300">Venue</a>
+            <a href="#gallery" className="text-white hover:text-primary-gold transition duration-300">Gallery</a>
+            <a href="#testimonials" className="text-white hover:text-primary-gold transition duration-300">Testimonials</a>
+            <a href="#contact" className="text-white hover:text-primary-gold transition duration-300">Contact</a>
+          </nav>
+          <div className="h-64 w-px bg-white opacity-50" /> {/* Adjusted vertical line */}
+        </div>
+      )}
 
       {/* Hamburger Menu for Mobile */}
       <button 
