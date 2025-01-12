@@ -11,6 +11,7 @@ export default function Hero() {
   const [people, setPeople] = useState(2);
   const [name, setName] = useState('');
   const [showFallback, setShowFallback] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleReservation = () => {
     const message = `Hello! I would like to make a reservation at RajRasa:\n\nName: ${name}\nDate: ${date}\nNumber of people: ${people}`;
@@ -105,6 +106,49 @@ export default function Hero() {
         </motion.button>
       </div>
 
+      {/* Vertical Navbar for Desktop */}
+      <div className="absolute right-16 top-1/2 transform -translate-y-1/2 z-30 md:flex items-center hidden">
+        <nav className="flex flex-col space-y-8 text-xl font-abhaya mr-6">
+          <a href="#about" className="text-white hover:text-primary-gold transition duration-300">About</a>
+          <a href="#chef" className="text-white hover:text-primary-gold transition duration-300">Chef</a>
+          <a href="#venue" className="text-white hover:text-primary-gold transition duration-300">Venue</a>
+          <a href="#gallery" className="text-white hover:text-primary-gold transition duration-300">Gallery</a>
+          <a href="#testimonials" className="text-white hover:text-primary-gold transition duration-300">Testimonials</a>
+          <a href="#contact" className="text-white hover:text-primary-gold transition duration-300">Contact</a>
+        </nav>
+        <div className="h-64 w-px bg-white opacity-50" /> {/* Adjusted vertical line */}
+      </div>
+
+      {/* Hamburger Menu for Mobile */}
+      <button 
+        onClick={() => setIsMenuOpen(!isMenuOpen)} 
+        className="fixed right-5 top-5 z-50 text-white focus:outline-none md:hidden"
+        aria-label="Toggle menu"
+      >
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
+        </svg>
+      </button>
+
+      {/* Full-Screen Navbar for Mobile */}
+      {isMenuOpen && (
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 bg-black bg-opacity-90 z-40 flex flex-col items-center justify-center p-4 md:hidden"
+        >
+          <nav className="flex flex-col space-y-6 text-white text-2xl">
+            <a href="#about" className="hover:text-primary-gold transition duration-300" onClick={() => setIsMenuOpen(false)}>About</a>
+            <a href="#chef" className="hover:text-primary-gold transition duration-300" onClick={() => setIsMenuOpen(false)}>Chef</a>
+            <a href="#venue" className="hover:text-primary-gold transition duration-300" onClick={() => setIsMenuOpen(false)}>Venue</a>
+            <a href="#gallery" className="hover:text-primary-gold transition duration-300" onClick={() => setIsMenuOpen(false)}>Gallery</a>
+            <a href="#testimonials" className="hover:text-primary-gold transition duration-300" onClick={() => setIsMenuOpen(false)}>Testimonials</a>
+            <a href="#contact" className="hover:text-primary-gold transition duration-300" onClick={() => setIsMenuOpen(false)}>Contact</a>
+          </nav>
+        </motion.div>
+      )}
+
       {isOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
           <motion.div 
@@ -116,10 +160,7 @@ export default function Hero() {
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-2xl font-bold text-gray-800 font-abhaya">Book Your Table</h2>
               <button 
-                onClick={() => {
-                  setIsOpen(false);
-                  setShowFallback(false);
-                }}
+                onClick={() => setIsOpen(false)}
                 className="text-gray-400 hover:text-gray-600 text-2xl font-light transition-colors"
               >
                 ×
@@ -209,3 +250,4 @@ export default function Hero() {
     </section>
   );
 }
+

@@ -15,36 +15,47 @@ export default function Home() {
   return (
     <main className="overflow-hidden">
       <Hero />
-      <div className="relative">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ 
-            backgroundImage: `url(${AboutBG.src})`, 
-            backgroundAttachment: 'fixed',
-            backgroundPosition: 'center',
-            backgroundSize: 'cover'
-          }}
-        />
-        <About />
-      </div>
-      <ChefSection />
+      <section id="about">
+        <div className="relative">
+          <div 
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ 
+              backgroundImage: `url(${AboutBG.src})`, 
+              backgroundAttachment: 'fixed',
+              backgroundPosition: 'center',
+              backgroundSize: 'cover'
+            }}
+          />
+          <About />
+        </div>
+      </section>
+      <section id="chef">
+        <ChefSection />
+      </section>
       <VideoSection />
-      <div className="relative">
-        <div 
-          className="absolute inset-0 bg-cover bg-center opacity-10"
-          style={{ backgroundImage: `url(${BG.src})` }}
-        />
-        <Gallery />
-        <Testimonials />
-      </div>
-      <VenueDetails />
-      <div className="relative">
-        <div 
-          className="absolute inset-0 bg-cover bg-center opacity-10"
-          style={{ backgroundImage: `url(${BG.src})` }}
-        />
-        <SocialFollow />
-      </div>
+      <section id="gallery">
+        <div className="relative">
+          <div 
+            className="absolute inset-0 bg-cover bg-center opacity-10"
+            style={{ backgroundImage: `url(${BG.src})` }}
+          />
+          <Gallery />
+          <Testimonials />
+        </div>
+      </section>
+      <section id="venue">
+        <VenueDetails />
+      </section>
+      <section id="testimonials">
+        <div className="relative">
+          <div 
+            className="absolute inset-0 bg-cover bg-center opacity-10"
+            style={{ backgroundImage: `url(${BG.src})` }}
+          />
+          <SocialFollow />
+        </div>
+      </section>
+      <section id="contact"></section>
     </main>
   );
 }

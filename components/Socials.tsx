@@ -39,7 +39,7 @@ export default function SocialFollow() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              <Instagram size={32} />
+              <Instagram size={32} className="text-pink-400" />
               <span className="sr-only">Instagram</span>
             </motion.a>
             <motion.a 
@@ -48,7 +48,7 @@ export default function SocialFollow() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              <Mail size={32} />
+              <Mail size={32} className="text-red-500" />
               <span className="sr-only">Email</span>
             </motion.a>
           </div>

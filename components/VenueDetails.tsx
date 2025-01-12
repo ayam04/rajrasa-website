@@ -35,9 +35,9 @@ export default function VenueDetails() {
               <MapPin className="w-6 h-6 text-primary-gold mt-1 flex-shrink-0" />
               <div>
                 <h3 className="font-abhaya text-4xl text-primary-blue mb-2">Location</h3>
-                <p className="font-abhaya text-dark-gray text-2xl">
+                <p className="font-abhaya text-dark-gray text-xl lg:text-2xl">
                   RajRasa, S-19, 20, 21, Nagar Nigam Colony<br />
-                  Amer Road, Jaipur, Rajasthan 302002
+                  Nr. Jorawar Singh Gate, Jaipur, Rajasthan 302002
                 </p>
               </div>
             </div>
@@ -46,7 +46,7 @@ export default function VenueDetails() {
               <Clock className="w-6 h-6 text-primary-gold mt-1 flex-shrink-0" />
               <div>
                 <h3 className="font-abhaya text-4xl text-primary-blue mb-2">Hours</h3>
-                <p className="font-abhaya text-dark-gray text-2xl">
+                <p className="font-abhaya text-dark-gray text-xl lg:text-2xl">
                   Lunch: 12:00 PM - 3:30 PM<br />
                   Dinner: 7:00 PM - 11:00 PM
                 </p>
@@ -57,7 +57,7 @@ export default function VenueDetails() {
               <Phone className="w-6 h-6 text-primary-gold mt-1 flex-shrink-0" />
               <div>
                 <h3 className="font-abhaya text-4xl text-primary-blue mb-2">Contact</h3>
-                <p className="font-abhaya text-dark-gray text-2xl">
+                <p className="font-abhaya text-dark-gray text-xl lg:text-2xl">
                   +91 9799905867<br />
                   +91 9530384175
                 </p>
@@ -68,7 +68,7 @@ export default function VenueDetails() {
               <Mail className="w-6 h-6 text-primary-gold mt-1 flex-shrink-0" />
               <div>
                 <h3 className="font-abhaya text-4xl text-primary-blue mb-2">Email</h3>
-                <p className="font-abhaya text-dark-gray text-2xl">
+                <p className="font-abhaya text-dark-gray text-xl lg:text-2xl">
                   rajrasa303@gmail.com<br />
                   {/* info@rajrasa.com */}
                 </p>

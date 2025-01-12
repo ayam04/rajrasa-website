@@ -164,7 +164,7 @@ export default function ChefSection() {
           </motion.div>
           
           <motion.div
-            className="relative h-[300px] md:h-[600px] flex justify-center mt-8 md:mt-12"
+            className="relative h-[600px] md:h-[800px] flex justify-center mt-8 md:mt-12"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
