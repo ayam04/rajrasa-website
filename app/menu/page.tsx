@@ -23,6 +23,20 @@ export default function MenuPage() {
     }
   ];
 
+  const handleMenuClick = (menuFile: string) => {
+    const isPhoneScreen = window.matchMedia("(max-width: 767px)").matches;
+    if (isPhoneScreen) {
+      const link = document.createElement('a');
+      link.href = menuFile;
+      link.download = menuFile.split('/').pop() || 'menu.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } else {
+      setSelectedMenu(menuFile);
+    }
+  };
+
   return (
     <main className="min-h-screen relative p-4">
         <div 
@@ -58,7 +72,7 @@ export default function MenuPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.2 }}
-                onClick={() => setSelectedMenu(menu.file)}
+                onClick={() => handleMenuClick(menu.file)}
                 className="bg-white/100 p-4 sm:p-8 rounded-lg shadow-lg cursor-pointer hover:shadow-xl transition-shadow border-2 border-primary-gold/20 group relative text-center"
               >
                 <h2 className="text-2xl sm:text-3xl font-abhaya text-primary-blue mb-2 sm:mb-4 group-hover:text-primary-gold transition-colors">
