@@ -119,7 +119,7 @@ export default function Hero() {
       {contentLoaded && (
         <div className="absolute right-16 top-1/2 transform -translate-y-1/2 z-30 md:flex items-center hidden">
           <nav className="flex flex-col space-y-8 text-xl font-abhaya mr-6">
-          <a href="/menu" className="text-white hover:text-primary-gold transition duration-300" onClick={() => setIsMenuOpen(false)}>Menu</a>
+            <a href="/menu" className="text-white hover:text-primary-gold transition duration-300" onClick={() => setIsMenuOpen(false)}>Menu</a>
             <a href="#about" className="text-white hover:text-primary-gold transition duration-300">About</a>
             <a href="#chef" className="text-white hover:text-primary-gold transition duration-300">Chef</a>
             <a href="#venue" className="text-white hover:text-primary-gold transition duration-300">Venue</a>
@@ -151,6 +151,7 @@ export default function Hero() {
           className="fixed inset-0 bg-black bg-opacity-90 z-40 flex flex-col items-center justify-center p-4 md:hidden"
         >
           <nav className="flex flex-col space-y-6 text-white text-2xl">
+            <a href="/menu" className="text-white hover:text-primary-gold transition duration-300" onClick={() => setIsMenuOpen(false)}>Menu</a>
             <a href="#about" className="hover:text-primary-gold transition duration-300" onClick={() => setIsMenuOpen(false)}>About</a>
             <a href="#chef" className="hover:text-primary-gold transition duration-300" onClick={() => setIsMenuOpen(false)}>Chef</a>
             <a href="#venue" className="hover:text-primary-gold transition duration-300" onClick={() => setIsMenuOpen(false)}>Venue</a>
