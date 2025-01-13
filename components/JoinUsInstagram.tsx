@@ -28,7 +28,7 @@ function Reel({ videoUrl, likes = 0, comments = 0 }: ReelProps) {
         playsInline
         src={videoUrl}
       />
-      <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-primary-blue/80 to-transparent">
+      <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-/80 to-transparent">
         <div className="flex gap-4">
           <button
             onClick={handleLike}
@@ -91,7 +91,7 @@ export default function JoinUsInstagram() {
           {reels.map((reel, index) => (
             <div 
               key={index} 
-              className={`w-[240px] flex-shrink-0 ${index % 2 === 1 ? 'translate-y-8' : ''}`}
+              className={`w-[240px] flex-shrink-0 ${index % 2 === 1 ? 'md:translate-y-8' : ''}`}
             >
               <Reel {...reel} />
             </div>
@@ -105,7 +105,7 @@ export default function JoinUsInstagram() {
           rel="noopener noreferrer"
           className="px-6 py-3 bg-primary-blue text-white rounded-full shadow-lg hover:bg-primary-gold transition-colors duration-300 z-30"
         >
-          Load More
+          View More
         </a>
       </div>
     </section>

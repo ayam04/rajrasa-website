@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion';
 import { Star } from 'lucide-react';
-import BG from '@/public/SectionBg.jpg';
 
 const testimonials = [
   {
@@ -73,6 +72,23 @@ export default function Testimonials() {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+          viewport={{ once: true }}
+          className="flex justify-center mt-12"
+        >
+          <a
+            href="https://www.google.com/search?client=mobilesearchapp&sca_esv=85709b99cef60822&channel=iss&cs=0&hl=en_GB&rlz=1MDAPLA_en-GBIN1129IN1129&v=346.1.704810410&sxsrf=ADLYWIISlrRNvKKqQ1dpiN_m0nfujE6jPQ:1735828278110&q=rajrasa+by+chef+saurabh+jaipur+reviews&uds=ADvngMgriHOxltqf7w4LVYG8L5BR3R4EiD99okGKST-Sul3ZdWft43wSC14yD3lzVAA9OXoywwXsjnhy0_0g2R0fnkX4TiOfNjVoXHfT53YssEpWfnfok4LBvBH__6uVF8ZiLAL8BOuAG3fL7C6TIokpFoxkcr4m3rmXYG8yiZgBJN-tZKKxupnk_e4YryZigRfrE6KChqWj60cmM4YP3bilaJu54gybqbNoWZ5xxNBrewcOo3Z_qOysCHRWpi2Jb8mFJmbKkyiNrmHdbGIGEFOXdHKouheWoETRsRL0UDxK5H9F2_sY1VL0vR6TyMUdzRqg0aUi31p6m-pxlc5Sr1T2sysGGZ55MoJBX3IO4GZpNhjfC80u0wwVq9QTpOwE4DhuC7zj44JhF8GTwZbk7RV4gSqSVMugYK1pMvUv8EdGhV22-Gn87M4TQmW8PvbOFwBecVLemkpz&si=ACC90nwjPmqJHrCEt6ewASzksVFQDX8zco_7MgBaIawvaF4-7i1w-vEFjO9-6zJHagSlKmWjeCZxgQZc35UMNRxO7nXucLDXZqy47iyVu8mxyy2qjXj1Bzo1cdH56WMHNheZyyC9XdEEzUc6R1fXMRB4cLwQ7tM4Bg%3D%3D&sa=X&ved=2ahUKEwi-kaGfoNeKAxVlyzgGHdTUOrUQk8gLegQIJRAB&ictx=1&biw=432&bih=837&dpr=2.5#ebo=3"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-8 py-3 bg-primary-gold text-white rounded-lg hover:bg-primary-gold/90 transition-colors duration-200 font-abhaya text-lg"
+          >
+            View More Reviews on Google
+          </a>
+        </motion.div>
       </div>
     </section>
   );
