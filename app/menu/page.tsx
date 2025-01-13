@@ -24,12 +24,12 @@ export default function MenuPage() {
   ];
 
   return (
-    <main className="min-h-screen relative p-4 flex flex-col justify-center">
+    <main className="min-h-screen relative p-4">
         <div 
             className="absolute inset-0 bg-cover bg-center opacity-10"
             style={{ backgroundImage: `url(${BG.src})` }}
           />
-      <div className="max-w-6xl mx-auto z-30 flex flex-col justify-center flex-1">
+      <div className="max-w-6xl mx-auto z-30">
         {/* Logo */}
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
@@ -50,7 +50,7 @@ export default function MenuPage() {
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 mt-6 sm:mt-12 relative z-10"
+            className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 mt-6 sm:mt-12 relative z-10 h-full flex-col justify-center items-center"
           >
             {menus.map((menu, index) => (
               <motion.div
