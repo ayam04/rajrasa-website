@@ -87,7 +87,7 @@ export default function JoinUsInstagram() {
         <span className="block text-2xl md:text-3xl text-primary-gold mt-2">Discover our world</span>
       </h2>
       <div className="relative w-full overflow-x-scroll no-scrollbar">
-        <div className="flex gap-4 md:gap-6 pb-8 px-4 min-w-min mx-auto">
+        <div className="flex gap-4 md:gap-6 pb-8 px-4 min-w-min mx-auto justify-center">
           {reels.map((reel, index) => (
             <div 
               key={index} 
