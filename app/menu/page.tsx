@@ -18,7 +18,7 @@ export default function MenuPage() {
     },
     {
       title: "À La Carte Menu",
-      file: "/menus/Rajrasa Mini Meals Menu + A La Carte.pdf",
+      file: "/menus/Rajrasa Mini Meals Menu and A La Carte.pdf",
       description: "Explore our extensive selection of individual dishes"
     }
   ];
