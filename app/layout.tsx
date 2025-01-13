@@ -38,6 +38,7 @@ export default function RootLayout({
             gtag('config', 'G-G74ZM25NBS');
           `}
         </Script>
+        <Script async src="//www.instagram.com/embed.js"></Script>
       </head>
       <body>
       <noscript>

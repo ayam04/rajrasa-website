@@ -10,6 +10,7 @@ import Gallery from '@/components/Gallery';
 import SocialFollow from '@/components/Socials';
 import AboutBG from '@/public/AboutBG.jpg'
 import BG from '@/public/SectionBg.jpg'
+import JoinUsInstagram from '@/components/JoinUsInstagram';
 
 export default function Home() {
   return (
@@ -54,10 +55,12 @@ export default function Home() {
             className="absolute inset-0 bg-cover bg-center opacity-10"
             style={{ backgroundImage: `url(${BG.src})` }}
           />
+          <JoinUsInstagram/>
           <SocialFollow />
         </div>
       </section>
-      <section id="contact"></section>
+      <section id="contact">
+      </section>
     </main>
   );
 }

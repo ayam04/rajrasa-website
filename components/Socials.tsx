@@ -19,7 +19,7 @@ export default function SocialFollow() {
   };
 
   return (
-    <section className="py-10 relative z-10">
+    <section className="pt-0 pb-10 relative z-10">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
