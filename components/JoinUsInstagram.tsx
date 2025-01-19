@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { Heart, MessageCircle } from 'lucide-react'
+import Image from 'next/image'
 
 interface ReelProps {
   videoUrl: string

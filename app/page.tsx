@@ -10,7 +10,11 @@ import Gallery from '@/components/Gallery';
 import SocialFollow from '@/components/Socials';
 import AboutBG from '@/public/AboutBG.jpg'
 import BG from '@/public/SectionBg.jpg'
-import JoinUsInstagram from '@/components/JoinUsInstagram';
+import dynamic from 'next/dynamic';
+
+const JoinUsInstagram = dynamic(() => import('@/components/JoinUsInstagram'), {
+  ssr: false,
+});
 
 export default function Home() {
   return (
@@ -55,7 +59,7 @@ export default function Home() {
             className="absolute inset-0 bg-cover bg-center opacity-10"
             style={{ backgroundImage: `url(${BG.src})` }}
           />
-          <JoinUsInstagram/>
+          <JoinUsInstagram />
           <SocialFollow />
         </div>
       </section>
