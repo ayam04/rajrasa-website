@@ -59,7 +59,7 @@ export default function VenueDetails() {
                 <h3 className="font-abhaya text-4xl text-primary-blue mb-2">Contact</h3>
                 <p className="font-abhaya text-dark-gray text-xl lg:text-2xl">
                   +91 9799905867<br />
-                  +91 9530384175
+                  +91 8306888689
                 </p>
               </div>
             </div>
